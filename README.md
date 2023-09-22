@@ -17,6 +17,8 @@
 3. Perform K-NN on the training set (How to determine K?)
 4. Check its performance on the test set
 
+   General Practitioners/Family Doctors typically do not have access to such a wide breadth of data as seen in the study that we pulled this data from. It would be useful for doctors to be able to flag their patients for being at risk of lung cancer based on typical factors recorded on patient intakes. Variables to include: 'Age', 'Alcohol Usage', 'Obesity', 'Smoking'. Exclusion criteria for other variables was based on relevance, accessibility, and redundancy. (eg. Gender is irrelevant, Air Pollution data is difficult to obtain, Coughing Blood already marks a patient to do lung cancer tests/PFTs.) Lung cancer severity was converted into a binary variable where severity 0,1,2 => 1 (lung cancer present), and severity 3 => 0 (lung cancer absent). 
+
 ### RQ2
 1. Separate the data into training and test sets
 2. Drop the variable severity
