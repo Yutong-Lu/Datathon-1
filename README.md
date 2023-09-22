@@ -19,6 +19,8 @@
 
    General Practitioners/Family Doctors typically do not have access to such a wide breadth of data as seen in the study that we pulled this data from. It would be useful for doctors to be able to flag their patients for being at risk of lung cancer based on typical factors recorded on patient intakes. Variables to include: 'Age', 'Alcohol Usage', 'Obesity', 'Smoking'. Exclusion criteria for other variables was based on relevance, accessibility, and redundancy. (eg. Gender is irrelevant, Air Pollution data is difficult to obtain, Coughing Blood already marks a patient to do lung cancer tests/PFTs.) Lung cancer severity was converted into a binary variable where severity 0,1,2 => 1 (lung cancer present), and severity 3 => 0 (lung cancer absent). We also have a version of this code which does not convert severity to detection. Instead, the relevance of this file demonstrates that cancer severity can be predicted for using the easily obtainable variables with a 1% difference in accuracy compared to using all variables. (98% vs 97%)
 
+   Maybe we should do a two-part analysis, where the first part is to predict severity, using only people who have cancer, and the second part is to predict cancer status, using both cancer patients and healthy people. The reason for this is that when we consider severity levels, the differences between 0 to 1, 1 to 2, or 0 to 2 may be represented as differences in distances in the space. However, a healthy person with severity 3 cannot be compared with either 0, 1, or 2 because they don't have cancer in the first place.
+
    Debating on including symptom variables including 'Chest Pain' and 'Coughing of Blood' because different severities of these symptoms may lead to different lung cancer severities. Also might include "Lung Disease" because having lung disease does not directly mean a person has lung cancer. Passive smoking might be obtainable as the GP could obtain the number of people who smoked around the patient.
 
    alcohol use, genetic risk, obesity, passive smoking, and blood coughing have the strongest positive correlation, while age and gender do not
@@ -26,8 +28,6 @@
    Regarding the number of neighbours K in KNN, we tried a variety of K values and found that K=1 always gives the greatest accuracy and precision, but it may lead to overfitting of the model. We plotted accuracy vs K and precision score vs K with K ranging from 1 to 30, and found that the first large drop in accuracy or precision occurs when K increases from 3 to 4.
 
    *This might change depending on the variables we use.*
-
-   *When using the binary cancer status variable, the first drop in precision and accuracy plot is from K = 2 to K = 3.*
 
 ### RQ2
 1. Choose variables to include in the process of k-mode. Drop the variable severity.
