@@ -21,6 +21,8 @@
 
    Debating on including symptom variables including 'Chest Pain' and 'Coughing of Blood' because different severities of these symptoms may lead to different lung cancer severities. Also might include "Lung Disease" because having lung disease does not directly mean a person has lung cancer. Passive smoking might be obtainable as the GP could obtain the number of people who smoked around the patient.
 
+   alcohol use, genetic risk, obesity, passive smoking, and blood coughing have the strongest positive correlation, while age and gender do not
+
    Regarding the number of neighbours K in KNN, we tried a variety of K values and found that K=1 always gives the greatest accuracy and precision, but it may lead to overfitting of the model. We plotted accuracy vs K and precision score vs K with K ranging from 1 to 30, and found that the first large drop in accuracy or precision occurs when K increases from 3 to 4.
 
    *This might change depending on the variables we use.*
