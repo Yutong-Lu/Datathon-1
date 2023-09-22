@@ -19,6 +19,10 @@
 
    General Practitioners/Family Doctors typically do not have access to such a wide breadth of data as seen in the study that we pulled this data from. It would be useful for doctors to be able to flag their patients for being at risk of lung cancer based on typical factors recorded on patient intakes. Variables to include: 'Age', 'Alcohol Usage', 'Obesity', 'Smoking'. Exclusion criteria for other variables was based on relevance, accessibility, and redundancy. (eg. Gender is irrelevant, Air Pollution data is difficult to obtain, Coughing Blood already marks a patient to do lung cancer tests/PFTs.) Lung cancer severity was converted into a binary variable where severity 0,1,2 => 1 (lung cancer present), and severity 3 => 0 (lung cancer absent). We also have a version of this code which does not convert severity to detection. Instead, the relevance of this file demonstrates that cancer severity can be predicted for using the easily obtainable variables with a 1% difference in accuracy compared to using all variables. (98% vs 97%)
 
+   Debating on including symptom variables including 'Chest Pain' and 'Coughing of Blood' because different severities of these symptoms may lead to different lung cancer severities.
+
+   Regarding the number of neighbours K in KNN, we tried a variety of K values and found that K=1 always gives the greatest accuracy and precision, but it may lead to overfitting of the model. We plotted accuracy vs K and precision score vs K with K ranging from 1 to 30, and found that the first large drop in accuracy or precision occurs when K increases from 3 to 4. *This might change depending on the variables we use*
+
 ### RQ2
 1. Separate the data into training and test sets
 2. Drop the variable severity
