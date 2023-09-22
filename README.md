@@ -30,10 +30,11 @@
    *When using the binary cancer status variable, the first drop in precision and accuracy plot is from K = 2 to K = 3.*
 
 ### RQ2
-1. Separate the data into training and test sets
-2. Drop the variable severity
-3. Perform K-means clustering on the training set (Use K=4 because there are 4 levels of severities)
-4. See if we get similar clustering as the variable severities
+1. Choose variables to include in the process of k-mode. Drop the variable severity.
+2. Perform K-mode clustering on the training set (Use K = 2 to start, check if k-mode can seperate cancer/healthy patient. Then, use K=4 to see if k mode can correctly cluster the 4 levels of severities)
+3. Also plot the Elbow plot to see the best K.
+4. Validation process: test the proportion of correctly clustered severity out of the whole data set.
+
 
 
 ## Written Report
