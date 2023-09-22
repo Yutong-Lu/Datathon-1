@@ -25,9 +25,10 @@
 
    alcohol use, genetic risk, obesity, passive smoking, and blood coughing have the strongest positive correlation, while age and gender do not
 
-   Regarding the number of neighbours K in KNN, we tried a variety of K values and found that K=1 always gives the greatest accuracy and precision, but it may lead to overfitting of the model. We plotted accuracy vs K and precision score vs K with K ranging from 1 to 30, and found that the first large drop in accuracy or precision occurs when K increases from 3 to 4.
+   Regarding the number of neighbours K in KNN, we tried a variety of K values and found that K=1 always gives the greatest accuracy and precision, but it may lead to overfitting of the model. We plotted accuracy vs K and precision score vs K with K ranging from 1 to 30, and found that the first large drop in accuracy or precision occurs when K increases from 10-11.
 
-   *This might change depending on the variables we use.*
+   * This might change depending on the variables we use. *
+   * The drop is between K = 2 to 3 for binary cancer status. *
 
 ### RQ2
 1. Choose variables to include in the process of k-mode. Drop the variable severity.
