@@ -36,6 +36,16 @@
 3. Also plot the Elbow plot to see the best K.
 4. Validation process: test the proportion of correctly clustered severity out of the whole data set.
 
+Due to the fact that k-means only works for numerical data, to explore the dataset with categorical features, we used k-mode clustering. K-mode clustering uses dissimilarity metric instead of Euclidean distance; uses mode instead of mean for cluster centroid.
+
+### Data exploration
+
+Based on the features that we are interested in, (easily accessible by general practitioners), we perform an exploratory data analysis. 
+
+Features to include in exploratory data analysis are 'Age', 'Alcohol Usage', 'Obesity', 'Smoking', 'Chest Pain' and 'Coughing of Blood'.
+We first randomly divide the dataset into 80% training and 20% test set using a randome state of 42. Since in practice, we only have training data available for analysis, we decided to perform data exploration only on the training set, which should also be representative of the whole dataset. 
+
+Based on the distribution plots of selected features, except for the 'Age' variable, all remaining features have a bimodal distribution. Based on this result, we have to be cautious about which normalization scaler to use since our fearues do not follow a Gaussian or Gaussian-like distribution. Alternatives: RobustScaler, QuantileTransformer,... 
 
 
 ## Written Report
